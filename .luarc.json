@@ -4,6 +4,7 @@
 
   "diagnostics.disable": [
       // LuaCATS ---@module annotation conflicts with luadoc
+      // meep was here
       "luadoc-miss-module-name"
   ],
   "diagnostics.globals": [

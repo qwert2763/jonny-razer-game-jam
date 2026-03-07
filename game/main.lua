@@ -5,22 +5,24 @@ local runtimeLoader = require("runtime.loader")
 function love.load()
   https = runtimeLoader.loadHTTPS()
   -- Your game load here
-  image = love.graphics.newImage("test.png")
+  test = love.graphics.newImage("test.png")
   love.graphics.setNewFont(12)
   love.graphics.setColor(0,0,0)
   love.graphics.setBackgroundColor(255,255,255)
   overlayStats.load() -- Should always be called last
-  imgx = 50 -- ok im like assigning the variables i think idk ive only used pythion
-  imgy = 50
+  playerx = 50 -- ok im like assigning the variables i think idk ive only used pythion
+  playery = 50
   speed = 200
+  Q = love.graphics.newImage("Q.png")
 end
 
 function love.draw()
   -- Your game draw here
 
-  love.graphics.draw(image, imgx, imgy)
+  love.graphics.draw(test, playerx, playery)
   love.graphics.print("i dont know how to use love2d help", 400, 100)
   love.graphics.print("wait this isnt as hard as i thought nvm", 450, 160)
+  love.graphics.draw(Q, 750, 750)
 
   overlayStats.draw() -- Should always be called last
 end
@@ -33,16 +35,16 @@ function love.update(dt)
     speed = 200
   end
   if w_down then
-    imgy = imgy - speed * dt
+    playery = playery - speed * dt
   end
   if s_down then
-    imgy = imgy + speed * dt
+    playery = playery + speed * dt
   end
   if a_down then
-    imgx = imgx - speed * dt
+    playerx = playerx - speed * dt
   end
   if d_down then
-    imgx = imgx + speed * dt
+    playerx = playerx + speed * dt
   end
   overlayStats.update(dt) -- Should always be called last
 end
@@ -65,6 +67,10 @@ function love.keypressed(key)
   end
   if key == "rshift" or key == "lshift" then
     shift_down = true
+  end
+  if key == "c" then
+    crash = crash + 1 -- this mskes the game crash if you press c
+    print("it worked but the crash code didnt") -- i only leave comments for really stupid reasons
   end
     overlayStats.handleKeyboard(key) -- Should always be called last
   end

@@ -23,6 +23,7 @@ indent_style = space
 indent_size = 2
 
 # Lua specific settings
+# meep was also here
 [*.{lua,luau,rockspec}]
 indent_style = space
 indent_size = 2
@@ -43,4 +44,5 @@ binary_next_line   = true
 switch_case_indent = true
 space_redirects    = false
 # --func-next-line
+# play find the ziggys
 function_next_line = false

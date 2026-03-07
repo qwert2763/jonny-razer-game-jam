@@ -37,8 +37,8 @@ function love.conf(t)
 
   t.window.title          = product_config["PRODUCT_NAME"]
   t.window.icon           = "Q.png"
-  t.window.width          = 1280
-  t.window.height         = 720
+  t.window.width          = 720 -- in case i misunderstood something this sed to be 1280
+  t.window.height         = 480 -- in case i misunderstood something this sed to be 720
   t.window.borderless     = false
   t.window.resizable      = true
   t.window.minwidth       = 1

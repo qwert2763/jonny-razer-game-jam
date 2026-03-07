@@ -24,9 +24,9 @@ function love.draw()
   love.graphics.print("wait this isnt as hard as i thought nvm", 450, 160)
   love.graphics.print("Press shift to sprint!", 450, 180)
   love.graphics.print("i am 100% doing this completely wrong", 460, 260)
-  love.graphics.print("how do you make an actual object this is jsut a moving image please someone else try and make something what do i do", 462, 300)
+  love.graphics.print("how do you make an actual object this is jsut a moving image please someone else try and make something what do i do", 300, 380)
   love.graphics.setColor(255,255,255,255) -- ook put images below tyhis and texty above it or it wont owrk i thoink
-    love.graphics.draw(Q, 500, 500)
+    love.graphics.draw(Q, 465, 465)
   love.graphics.draw(test, playerx, playery)
 
   overlayStats.draw() -- Should always be called last

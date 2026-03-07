@@ -19,10 +19,13 @@ end
 function love.draw()
   -- Your game draw here
 
-  love.graphics.draw(test, playerx, playery)
+  love.graphics.setColor(0,0,0,255)
   love.graphics.print("i dont know how to use love2d help", 400, 100)
   love.graphics.print("wait this isnt as hard as i thought nvm", 450, 160)
-  love.graphics.draw(Q, 750, 750)
+  love.graphics.print("i am 100% doing this completely wrong", 460, 260)
+  love.graphics.setColor(255,255,255,255) -- ook put images below tyhis and texty above it or it wont owrk i thoink
+  love.graphics.draw(test, playerx, playery)
+  love.graphics.draw(Q, 500, 500)
 
   overlayStats.draw() -- Should always be called last
 end

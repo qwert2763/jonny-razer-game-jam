@@ -36,7 +36,7 @@ function love.conf(t)
   t.audio.mixwithsystem   = false
 
   t.window.title          = product_config["PRODUCT_NAME"]
-  t.window.icon           = "test.png"
+  t.window.icon           = "Q.png"
   t.window.width          = 1280
   t.window.height         = 720
   t.window.borderless     = false
